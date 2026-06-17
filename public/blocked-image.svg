@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="320" viewBox="0 0 480 320">
+  <rect width="480" height="320" fill="#f8f8f8" rx="8" stroke="#e0e0e0" stroke-width="1"/>
+  <!-- Diagonal stripes pattern -->
+  <defs>
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="12" height="12" patternTransform="rotate(45)">
+      <rect width="6" height="12" fill="#f0f0f0"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="320" fill="url(#stripes)" rx="8"/>
+  <rect width="480" height="320" fill="rgba(248,248,248,0.85)" rx="8"/>
+  <!-- Block circle icon -->
+  <circle cx="240" cy="130" r="52" fill="none" stroke="#d94f4f" stroke-width="5"/>
+  <line x1="203" y1="93" x2="277" y2="167" stroke="#d94f4f" stroke-width="5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="240" y="220" text-anchor="middle" fill="#555" font-size="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-weight="600">접근이 차단된 이미지</text>
+  <text x="240" y="248" text-anchor="middle" fill="#999" font-size="13" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">Network or firewall blocked this image</text>
+</svg>

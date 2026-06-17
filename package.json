@@ -1,0 +1,19 @@
+{
+  "name": "vitepress-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "개발 가이드",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "format": "prettier --write ./docs"
+  },
+  "dependencies": {
+    "flexsearch": "0.8.212"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "vitepress": "2.0.0-alpha.17"
+  }
+}
