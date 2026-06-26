@@ -3,51 +3,45 @@ layout: home
 
 hero:
   name: "주원웅"
-  text: "Platform Engineer & AI Developer"
-  tagline: "LG CNS 플랫폼엔지니어링팀 · AWS Cloud / LLM / Backend · 2022.07 ~ "
-  actions:
-    - theme: brand
-      text: 프로젝트 이력 보기
-      link: /llm/projects/
-    - theme: alt
-      text: 실습 계획 보기
-      link: /llm/
+  text: "Platform Engineer      AI Developer"
+  tagline: "LG CNS · AWS Cloud / LLM / Backend · 2022.07 ~ "
+
 
 features:
   - icon: 📂
     title: 프로젝트 이력
     details: LG CNS 재직 중 수행한 14개 실무 프로젝트 — AI Agent, Cloud Infra, Frontend 전환까지
-    link: /llm/projects/
+    link: /projects/
     linkText: 이력 보기
 
   - icon: 🏗️
     title: AWS 인프라 구축
     details: Terraform IaC로 VPC · GitLab EC2 · EKS 클러스터 구성부터 CI/CD 파이프라인 연동까지
-    link: /llm/aws-infra/00-overview
+    link: /aws-infra/00-overview
     linkText: 가이드 보기
 
   - icon: ⚡
     title: 대규모 트래픽 처리
     details: Redis 캐시 · Rate Limiting · Circuit Breaker · SSE 스트리밍 · Celery · Observability
-    link: /llm/traffic/00-overview
+    link: /traffic/00-overview
     linkText: 전략 보기
 
   - icon: 🚀
     title: 추론 성능 개선
     details: vLLM · 양자화(AWQ/GPTQ) · KV Cache · 모델 라우팅 · TensorRT-LLM / Triton 서빙 도구 비교
-    link: /llm/inference-optimization/00-overview
+    link: /inference-optimization/00-overview
     linkText: 최적화 보기
 
   - icon: 🖥️
     title: EKS GPU 서빙 실습
     details: EKS g5.12xlarge (A10G × 4) 위에서 vLLM · TensorRT-LLM · Triton · Stable Diffusion 실제 배포 및 API 테스트
-    link: /llm/inference-optimization/llm-serve/00-overview
+    link: /inference-optimization/llm-serve/00-overview
     linkText: 실습 보기
 
   - icon: 📋
     title: 실습 계획 & 현황
     details: AI Inference Platform 단계별 구축 계획과 현재 진행 상황 추적
-    link: /llm/progress
+    link: /progress
     linkText: 현황 보기
 ---
 
@@ -108,28 +102,28 @@ github 주소: https://github.com/all-day-and-night
   <div class="eks-infra">
     <div class="eks-badge">g5.12xlarge · A10G × 4 · 96GB VRAM</div>
     <div class="eks-options">
-      <a href="/llm/inference-optimization/llm-serve/02-option-a-vllm" class="eks-option">
+      <a href="/inference-optimization/llm-serve/02-option-a-vllm" class="eks-option">
         <span class="eks-option-label">Option A</span>
         <strong>vLLM</strong>
         <span>Qwen2.5-7B · TP=2 · OpenAI 호환</span>
       </a>
-      <a href="/llm/inference-optimization/llm-serve/03-option-b-trtllm" class="eks-option">
+      <a href="/inference-optimization/llm-serve/03-option-b-trtllm" class="eks-option">
         <span class="eks-option-label">Option B</span>
         <strong>TensorRT-LLM</strong>
         <span>tp_size=2 · 성능 최적화</span>
       </a>
-      <a href="/llm/inference-optimization/llm-serve/04-option-c-triton" class="eks-option">
+      <a href="/inference-optimization/llm-serve/04-option-c-triton" class="eks-option">
         <span class="eks-option-label">Option C</span>
         <strong>Triton</strong>
         <span>KServe V2 · 엔터프라이즈</span>
       </a>
-      <a href="/llm/inference-optimization/llm-serve/05-option-d-sd" class="eks-option">
+      <a href="/inference-optimization/llm-serve/05-option-d-sd" class="eks-option">
         <span class="eks-option-label">Option D</span>
         <strong>Stable Diffusion</strong>
         <span>SDXL 1.0 · txt2img API</span>
       </a>
     </div>
-    <a href="/llm/inference-optimization/llm-serve/00-overview" class="project-link" style="margin-top:0.75rem;display:inline-block;">전체 실습 보기 →</a>
+    <a href="/inference-optimization/llm-serve/00-overview" class="project-link" style="margin-top:0.75rem;display:inline-block;">전체 실습 보기 →</a>
   </div>
 </div>
 
@@ -145,7 +139,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">Java</span><span class="tech-badge">Spring</span><span class="tech-badge">Llama 3</span><span class="tech-badge">Exaone</span>
     </div>
     <p>LG 디스플레이 사내 메일에 LLM 기반 기능(요약 · 초안 · 멀티턴 대화) 추가. 아키텍처 설계부터 비동기 구현, 부하 테스트까지 2인 전담.</p>
-    <a href="/llm/projects/03-lgd-mail-agent" class="project-link">자세히 보기 →</a>
+    <a href="/projects/07-lgd-mail-agent" class="project-link">자세히 보기 →</a>
   </div>
 
   <div class="project-card">
@@ -157,7 +151,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">Terraform</span><span class="tech-badge">EKS</span><span class="tech-badge">SageMaker</span><span class="tech-badge">Dask</span>
     </div>
     <p>ML 학습/추론 파이프라인 AWS 자동화. Terraform IaC + SageMaker Training + EKS Batch Pod 전 과정 구축.</p>
-    <a href="/llm/projects/01-mop-eks" class="project-link">자세히 보기 →</a>
+    <a href="/projects/02-mop-eks" class="project-link">자세히 보기 →</a>
   </div>
 
   <div class="project-card">
@@ -169,7 +163,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">AWS Bedrock</span><span class="tech-badge">OpenSearch</span><span class="tech-badge">RAG</span>
     </div>
     <p>Bedrock + OpenSearch 기반 RAG 아키텍처로 생성형 AI Agent 구축.</p>
-    <a href="/llm/projects/08-dno-agent" class="project-link">자세히 보기 →</a>
+    <a href="/projects/08-dno-agent" class="project-link">자세히 보기 →</a>
   </div>
 
   <div class="project-card">
@@ -181,7 +175,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">LangChain</span><span class="tech-badge">DeepAgent</span><span class="tech-badge">FastAPI</span>
     </div>
     <p>광고 최적화 플랫폼에 LangChain DeepAgent 연동한 AI 고도화.</p>
-    <a href="/llm/projects/12-mop-agent" class="project-link">자세히 보기 →</a>
+    <a href="/projects/12-mop-agent" class="project-link">자세히 보기 →</a>
   </div>
 
   <div class="project-card">
@@ -193,7 +187,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">Vue 3</span><span class="tech-badge">Vite</span><span class="tech-badge">Capacitor</span>
     </div>
     <p>레거시 프론트엔드를 Vue 3 기반으로 전환, Claude Harness를 활용한 AI 보조 개발 적용.</p>
-    <a href="/llm/projects/14-nhfire-frontend" class="project-link">자세히 보기 →</a>
+    <a href="/projects/13-nhfire-frontend" class="project-link">자세히 보기 →</a>
   </div>
 
   <div class="project-card">
@@ -205,7 +199,7 @@ github 주소: https://github.com/all-day-and-night
       <span class="tech-badge">EKS</span><span class="tech-badge">vLLM</span><span class="tech-badge">Terraform</span><span class="tech-badge">GitLab CI</span>
     </div>
     <p>개인 실습용 AI Inference Platform 구축 — EKS 클러스터부터 LLM 서빙, 트래픽 처리까지.</p>
-    <a href="/llm/projects/13-eks-llm-infra" class="project-link">자세히 보기 →</a>
+    <a href="/projects/14-eks-llm-infra" class="project-link">자세히 보기 →</a>
   </div>
 </div>
 

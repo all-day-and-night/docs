@@ -1,0 +1,7 @@
+test-runner:
+  tags:
+    - shell
+  script:
+    - echo "Hello, World!"
+    - whomai  
+    - aws --version
