@@ -43,6 +43,8 @@ LLM Agent, RAG, AWS Bedrock 기반 AI 서비스 설계·구현부터 Terraform E
 |------|------|
 | 프로젝트 이력 | 실무 참여 프로젝트 14건 상세 기록 |
 | AWS 인프라 구축 | Terraform Bootstrap → VPC → EKS → GitLab Runner → CI/CD → 도메인 & SSL |
+| Frontend CI/CD 배포 | GitLab CI → S3 sync → CloudFront 무효화 (pnpm + Turborepo) |
+| Backend EKS 배포 | ArgoCD GitOps, Blue/Green (Argo Rollouts), HPA + Karpenter, GitLab CI 파이프라인, 도메인 & 보안 |
 | 대규모 트래픽 처리 | Redis 캐시, Rate Limiting, Circuit Breaker, SSE 스트리밍, Celery, Observability |
 | 추론 성능 개선 | vLLM, Quantization, Context 최적화, Model Routing, 서빙 도구 비교 |
 | K8s 하이브리드 배포 | K8s 매니페스트, App 컴포넌트, Rancher 배포 |
@@ -94,7 +96,7 @@ pnpm preview    # 빌드 결과물 로컬 미리보기
 
 - **클라우드**: AWS (EC2, EKS, S3, Route 53, ACM)
 - **IaC**: Terraform
-- **CI/CD**: GitLab CI (Shell Executor, EC2 Runner)
+- **CI/CD**: GitLab CI (Docker Executor) — Frontend(S3 + CloudFront) / Backend(ECR + ArgoCD GitOps)
 - **정적 사이트**: VitePress 빌드 결과물을 EC2에서 서빙
 - **도메인 & SSL**: Route 53 + ACM
 
@@ -120,6 +122,23 @@ docs/
 │   ├── 06-future-plan.md
 │   ├── 07-domain-ssl.md
 │   └── troubleshooting.md
+├── ci-cd/                          # CI/CD 배포 환경
+│   ├── 00-overview.md
+│   ├── fe/                         # Frontend 배포 (S3 + CloudFront)
+│   │   ├── 00-overview.md
+│   │   ├── 01-pipeline.md
+│   │   ├── 02-build.md
+│   │   ├── 03-deploy.md
+│   │   └── 04-aws-credentials.md
+│   └── be/                         # Backend EKS 배포
+│       ├── 00-overview.md
+│       ├── 01-terraform.md
+│       ├── 02-argocd.md            # ArgoCD — GitOps & App of Apps
+│       ├── 03-blue-green.md        # Blue/Green — Argo Rollouts
+│       ├── 04-hpa-karpenter.md     # HPA + Karpenter 오토스케일링
+│       ├── 05-pipeline.md          # GitLab CI — ECR + GitOps
+│       ├── 06-domain-access.md     # 도메인 접속 & 보안 관리
+│       └── 07-rds-connection-pool.md
 ├── traffic/                        # 대규모 트래픽 처리
 │   ├── 00-overview.md ~ 09-observability.md
 │   └── agent-be-k8s-hybrid/
