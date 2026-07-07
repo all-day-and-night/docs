@@ -8,7 +8,10 @@
 
 LG CNS 플랫폼엔지니어링팀에서 **AI/LLM 서비스 개발**과 **AWS 클라우드 인프라 구축**을 담당하고 있습니다. (2022.07 ~)
 
-LLM Agent, RAG, AWS Bedrock 기반 AI 서비스 설계·구현부터 Terraform EKS 인프라, FastAPI/Spring Boot 백엔드, Vue 3/React 프론트엔드까지 **풀스택 + 클라우드** 전반을 담당합니다.
+LLM Agent, RAG, AWS Bedrock 기반 AI 서비스 설계·구현부터 
+Terraform EKS 인프라
+FastAPI/Spring Boot 백엔드
+Vue 3/React 프론트엔드까지 **풀스택 + 클라우드** 전반을 담당합니다.
 
 ### 보유 역량
 
